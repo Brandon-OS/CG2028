@@ -977,3 +977,38 @@ Finished building: default.size.stdout
  
 Finished building: CG2028_AY2324S1_Assign1.list
  
+23:01:23 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17408	    480	   1760	  19648	   4cc0	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+23:01:24 **** Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+23:01:25 **** Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+23:01:25 **** Build of configuration Debug for project blink_pure_asm ****
+make -j8 all 
+arm-none-eabi-size   blink_pure_asm.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	     16	   1568	   2328	    918	blink_pure_asm.elf
+Finished building: default.size.stdout
+ 

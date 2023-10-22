@@ -81,8 +81,8 @@ Disassembly of section .text:
  80001cc:	08003f54 	.word	0x08003f54
 
 080001d0 <insertion_sort>:
-@ R0 ...
-@ R1 ...
+@ R10
+
 
 @ write your program from here:
 insertion_sort:

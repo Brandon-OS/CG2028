@@ -1,18 +1,10 @@
-09:50:55 **** Build of configuration Debug for project blink_pure_asm ****
+23:01:25 **** Build of configuration Debug for project blink_pure_asm ****
 make -j8 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l475vgtx.d" -MT"Startup/startup_stm32l475vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l475vgtx.o" "../Startup/startup_stm32l475vgtx.s"
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
-arm-none-eabi-gcc -o "blink_pure_asm.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\CG2028Labs\Lab1\blink_pure_asm\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blink_pure_asm.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: blink_pure_asm.elf
- 
 arm-none-eabi-size   blink_pure_asm.elf 
-arm-none-eabi-objdump -h -S  blink_pure_asm.elf  > "blink_pure_asm.list"
    text	   data	    bss	    dec	    hex	filename
     744	     16	   1568	   2328	    918	blink_pure_asm.elf
 Finished building: default.size.stdout
  
-Finished building: blink_pure_asm.list
- 
 
-09:50:56 Build Finished. 0 errors, 0 warnings. (took 1s.294ms)
+23:01:26 Build Finished. 0 errors, 0 warnings. (took 505ms)
 

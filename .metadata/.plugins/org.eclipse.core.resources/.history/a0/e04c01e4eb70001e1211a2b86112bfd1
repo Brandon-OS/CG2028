@@ -23,8 +23,18 @@
 
 @ You could create a look-up table of registers here:
 
-@ R0 ...
-@ R1 ...
+@ R0 Original array and number of swaps
+@ R1 Total number of elements in array
+@ R2 Index of array in the outer loop
+@ R3 Index of array in the inner loop
+@ R4 Temporary register for swapping
+@ R5 Counter for the total number of swaps
+@ R6 Value of the index in the outer loop
+@ R7 Value of the index in the inner loop
+@ R8 Temporary outer loop index (to perform operations)
+@ R9Temporary outer loop index (to perform operations)
+@ R10
+
 
 @ write your program from here:
 insertion_sort:
@@ -35,6 +45,7 @@ insertion_sort:
 	// R2 - current index
 	// R3 - prev index
 	// R4 - temp value
+	// R5 - number of swaps
 	// R6 - current value
 	// R7 - previous value
 	// R8 - temp index
@@ -42,47 +53,55 @@ insertion_sort:
 	// R10 - #4
 
 	MOV R2, #1
-	MOV R0, #0
+	MOV R5, #0
 	MOV R10, #4
 
 	BL outer_loop
 
+done_sorting:
+	MOV R0, R5
 	POP {R4, R5, R6, R7, R8, R9, R10, R14}
 	BX LR
 
 outer_loop:
-	BL inner_loop
-	ADD R2, #1
-
 	CMP R2, R1
-	BGE insertion_sort
+	BGE done_sorting
+
+	ADD R2, #1
+	MOV R3, R2
+	BL inner_loop
 
 inner_loop:
-	SUB R3, R2, #1
-
-	// swap elements if less than previous
-	SUB R8, R2, #1
-	SUB R9, R2, #1
-	MUL R8, R8, R10
-	MUL R9, R9, R10
-	LDR R6, [R0, R8]
-	LDR R7, [R0, R9]
-	CMP R6, R7
-	BL SWAP
-
 	SUB R3, #1
 
 	// return to outer loop
 	CMP R3, #0
 	BEQ outer_loop
 
-SWAP:
 	SUB R8, R2, #1
-	SUB R9, R2, #1
+	SUB R9, R3, #1
 	MUL R8, R8, R10
 	MUL R9, R9, R10
-	LDR R6, [R0, R9]
-	LDR R7, [R0, R8]
-	ADD R0, #1
+
+	LDR R6, [R0, R8]
+	LDR R7, [R0, R9]
+
+	CMP R6, R7
+	BLT SWAP
+
+	B outer_loop
+
+SWAP:
+	MOV R4, R7
+	MOV R7, R6
+	MOV R6, R4
+	STR R7, [R0, R9]
+	STR R6, [R0, R8]
+	LDR R11, [R0, R8]
+	SUB R2, #1
+	ADD R5, #1
+
+
+	B inner_loop
 
 
