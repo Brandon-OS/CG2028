@@ -1,0 +1,79 @@
+/*
+ * insertion_sort.s
+ *
+ *  Created on: 10/08/2023
+ *      Author: Ni Qingqing
+ */
+   .syntax unified
+	.cpu cortex-m4
+	.fpu softvfp
+	.thumb
+
+		.global insertion_sort
+
+@ Start of executable code
+.section .text
+
+@ EE2028 Assignment 1, Sem 1, AY 2023/24
+@ (c) ECE NUS, 2023
+@ Insertion sort arr in ascending order
+
+@ Write Student 1’s Name here:
+@ Write Student 2’s Name here:
+
+@ You could create a look-up table of registers here:
+
+@ R0 ...
+@ R1 ...
+
+@ write your program from here:
+insertion_sort:
+	PUSH {R4, R5, R6, R7, R14}
+
+	// R0 - array
+	// R1 - total number of elements
+	// R2 - current index
+	// R3 - prev index
+	// R4 - temp value
+	// R5 - inner loop index
+	// R6 - current value
+	// R7 - previous value
+
+	LDR R2, [R0, #4] // access next member of array
+	MOV R0, R2
+
+	LDR R2, #1
+	LDR R5, #1
+
+	BL SUBROUTINE
+
+	POP {R4, R5, R6, R7, R14}
+	BX LR
+
+outer_loop:
+
+	BL inner_loop
+	ADD R2, #1
+
+	CMP R2, R1
+	BX insertion_sort
+
+inner_loop:
+
+	// swap elements if less than previous
+	LDR R6, [R0, #4 * R2]
+	LDR R7, [R0, #4 * R3]
+	CMP R6, R7
+	BL SWAP
+
+	ADD R5, #1
+
+	// return to outer loop
+	CMP R5, R2
+	BGE outer_loop
+
+SWAP:
+	STR R7, [R0, #4 * R2]
+	STR R6, [R0, #4 * R3]
+
+

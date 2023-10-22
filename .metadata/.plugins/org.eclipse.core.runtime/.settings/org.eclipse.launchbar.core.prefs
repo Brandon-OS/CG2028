@@ -1,0 +1,13 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:blink_plain_C,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:blink_pure_asm,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm_basic,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CG2028_AY2324S1_Assign1,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CG2028_AY2324S1_Assign1 Debug
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CG2028_AY2324S1_Assign1\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CG2028_AY2324S1_Assign1\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm_basic/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm_basic/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:blink_plain_C/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:blink_plain_C/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:CG2028_AY2324S1_Assign1\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:CG2028_AY2324S1_Assign1\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

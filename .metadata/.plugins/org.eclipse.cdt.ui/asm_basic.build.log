@@ -1,0 +1,10 @@
+10:05:49 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+
+10:05:49 Build Finished. 0 errors, 0 warnings. (took 272ms)
+

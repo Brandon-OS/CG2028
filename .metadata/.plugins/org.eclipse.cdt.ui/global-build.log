@@ -1,0 +1,979 @@
+09:47:41 **** Clean-only build of configuration Debug for project asm_basic ****
+make -j8 clean 
+rm -rf *
+ 
+09:47:42 **** Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l475vgtx.d" -MT"Startup/startup_stm32l475vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l475vgtx.o" "../Startup/startup_stm32l475vgtx.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "asm_basic.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\CG2028Labs\Lab1\asm_basic\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="asm_basic.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: asm_basic.elf
+ 
+arm-none-eabi-size   asm_basic.elf 
+arm-none-eabi-objdump -h -S  asm_basic.elf  > "asm_basic.list"
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+Finished building: asm_basic.list
+ 
+09:48:09 **** Clean-only build of configuration Debug for project blink_plain_C ****
+make -j8 clean 
+rm -rf *
+ 
+09:48:09 **** Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l475vgtx.d" -MT"Startup/startup_stm32l475vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l475vgtx.o" "../Startup/startup_stm32l475vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "blink_plain_C.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\CG2028Labs\Lab1\blink_plain_C\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blink_plain_C.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: blink_plain_C.elf
+ 
+arm-none-eabi-size   blink_plain_C.elf 
+arm-none-eabi-objdump -h -S  blink_plain_C.elf  > "blink_plain_C.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+Finished building: blink_plain_C.list
+ 
+09:48:36 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:49:05 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:49:11 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:49:26 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:49:32 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:49:38 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:49:44 **** Incremental Build of configuration Debug for project blink_plain_C ****
+make -j8 all 
+arm-none-eabi-size   blink_plain_C.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     16	   1568	   2408	    968	blink_plain_C.elf
+Finished building: default.size.stdout
+ 
+09:50:55 **** Clean-only build of configuration Debug for project blink_pure_asm ****
+make -j8 clean 
+rm -rf *
+ 
+09:50:55 **** Build of configuration Debug for project blink_pure_asm ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l475vgtx.d" -MT"Startup/startup_stm32l475vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l475vgtx.o" "../Startup/startup_stm32l475vgtx.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "blink_pure_asm.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\CG2028Labs\Lab1\blink_pure_asm\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blink_pure_asm.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: blink_pure_asm.elf
+ 
+arm-none-eabi-size   blink_pure_asm.elf 
+arm-none-eabi-objdump -h -S  blink_pure_asm.elf  > "blink_pure_asm.list"
+   text	   data	    bss	    dec	    hex	filename
+    744	     16	   1568	   2328	    918	blink_pure_asm.elf
+Finished building: default.size.stdout
+ 
+Finished building: blink_pure_asm.list
+ 
+09:54:21 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+09:54:52 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+09:55:53 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+09:59:07 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+10:01:54 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+10:05:49 **** Incremental Build of configuration Debug for project asm_basic ****
+make -j8 all 
+arm-none-eabi-size   asm_basic.elf 
+   text	   data	    bss	    dec	    hex	filename
+    680	     16	   1568	   2264	    8d8	asm_basic.elf
+Finished building: default.size.stdout
+ 
+09:32:30 **** Clean-only build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 clean 
+rm -rf *
+ 
+09:32:31 **** Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l475vgtx.d" -MT"Startup/startup_stm32l475vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l475vgtx.o" "../Startup/startup_stm32l475vgtx.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+09:34:26 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+09:35:43 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+09:51:58 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+09:52:21 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+09:52:58 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+09:53:34 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+09:54:25 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+09:54:55 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+10:05:14 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:05:59 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:06:20 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    480	   1760	  19528	   4c48	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:07:41 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:34: Error: cannot use register index with PC-relative addressing -- `str R1,R0'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:08:27 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:08:42 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+10:09:00 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+10:10:03 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:10:17 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+10:10:55 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:11:07 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+10:12:02 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:34: Error: ARM register expected -- `add [R1],#4'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:13:17 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:34: Error: ARM register expected -- `add [R1,#4]'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:14:14 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+10:15:41 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:34: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:16:36 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17304	    480	   1760	  19544	   4c58	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+20:49:32 **** Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:60: Error: invalid operands (*ABS* and *UND* sections) for `*'
+../Src/insertion_sort.s:61: Error: invalid operands (*ABS* and *UND* sections) for `*'
+../Src/insertion_sort.s:72: Error: invalid operands (*ABS* and *UND* sections) for `*'
+../Src/insertion_sort.s:73: Error: invalid operands (*ABS* and *UND* sections) for `*'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:00:42 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:64: Error: ARM register expected -- `mul R8,#4'
+../Src/insertion_sort.s:65: Error: ARM register expected -- `mul R9,#4'
+../Src/insertion_sort.s:66: Error: garbage following instruction -- `ldr R6,R0,[R8]'
+../Src/insertion_sort.s:67: Error: garbage following instruction -- `ldr R7,R0,[R9]'
+../Src/insertion_sort.s:80: Error: ARM register expected -- `mul R8,#4'
+../Src/insertion_sort.s:81: Error: ARM register expected -- `mul R9,#4'
+../Src/insertion_sort.s:82: Error: garbage following instruction -- `ldr R6,R0,[R9]'
+../Src/insertion_sort.s:83: Error: garbage following instruction -- `ldr R7,R0,[R8]'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:06:53 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:64: Error: ARM register expected -- `mul R8,R8,#4'
+../Src/insertion_sort.s:65: Error: ARM register expected -- `mul R9,R9,#4'
+../Src/insertion_sort.s:66: Error: garbage following instruction -- `ldr R6,R0,[R8]'
+../Src/insertion_sort.s:67: Error: garbage following instruction -- `ldr R7,R0,[R9]'
+../Src/insertion_sort.s:80: Error: ARM register expected -- `mul R8,R8,#4'
+../Src/insertion_sort.s:81: Error: ARM register expected -- `mul R9,R9,#4'
+../Src/insertion_sort.s:82: Error: garbage following instruction -- `ldr R6,R0,[R9]'
+../Src/insertion_sort.s:83: Error: garbage following instruction -- `ldr R7,R0,[R8]'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:08:56 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:68: Error: garbage following instruction -- `ldr R6,R0,[R8]'
+../Src/insertion_sort.s:69: Error: garbage following instruction -- `ldr R7,R0,[R9]'
+../Src/insertion_sort.s:84: Error: garbage following instruction -- `ldr R6,R0,[R9]'
+../Src/insertion_sort.s:85: Error: garbage following instruction -- `ldr R7,R0,[R8]'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:09:59 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:46: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/insertion_sort.s:44: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/insertion_sort.s:45: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:10:23 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:17:18 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:17:34 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:18:20 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+21:22:07 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+21:22:19 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+21:29:08 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:57: Error: garbage following instruction -- `mov R3,R2-1'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:29:37 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:30:36 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:30:43 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:35:50 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:76: Error: instruction not allowed in IT block -- `ldr R7,[R0]'
+../Src/insertion_sort.s:78: Error: instruction not allowed in IT block -- `cmp R6,R7'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:37:25 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:76: Error: instruction not allowed in IT block -- `ldr R7,[R0,R9]'
+../Src/insertion_sort.s:77: Error: instruction not allowed in IT block -- `ldr R7,[R0]'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:37:46 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:76: Error: found ',', expected: ']'
+../Src/insertion_sort.s:76: Error: constant expression expected -- `mov R7,[R0,R9]'
+../Src/insertion_sort.s:77: Error: instruction not allowed in IT block -- `mov R7,[R0]'
+../Src/insertion_sort.s:79: Error: instruction not allowed in IT block -- `cmp R6,R7'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:38:44 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:76: Error: bad instruction `movet R7,[R0,R9]'
+../Src/insertion_sort.s:77: Error: incorrect condition in IT block -- `movne R7,[R0]'
+../Src/insertion_sort.s:79: Error: instruction not allowed in IT block -- `cmp R6,R7'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:40:29 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:43:14 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:48: Error: found ',', expected: ']'
+../Src/insertion_sort.s:48: Error: constant expression expected -- `mov R11,[R0,#4]'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:43:34 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:44:50 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:45:42 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:46:40 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17400	    480	   1760	  19640	   4cb8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:48:57 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:49:16 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+21:51:19 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:53:01 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:88: Error: ARM register expected -- `str [R0,R9],R7'
+../Src/insertion_sort.s:89: Error: ARM register expected -- `str [R0,R8],R6'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:53:32 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+21:53:47 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+21:57:51 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:01:27 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:09:10 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:16:37 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:16:51 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:17:04 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+22:20:30 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+22:22:42 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:27:19 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:29:54 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17368	    480	   1760	  19608	   4c98	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:33:43 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:34:01 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:35:38 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17424	    480	   1760	  19664	   4cd0	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:38:07 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:38:40 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:38:55 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+../Src/insertion_sort.s: Assembler messages:
+../Src/insertion_sort.s:52: Error: cannot use register index with PC-relative addressing -- `str R0,R5'
+make: *** [Src/subdir.mk:29: Src/insertion_sort.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:39:08 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Src/insertion_sort.d" -MT"Src/insertion_sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/insertion_sort.o" "../Src/insertion_sort.s"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17384	    480	   1760	  19624	   4ca8	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
+22:39:39 **** Incremental Build of configuration Debug for project CG2028_AY2324S1_Assign1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32L4 -DSTM32 -DDEBUG -DSTM32L475VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CG2028_AY2324S1_Assign1.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"D:\CG2028Labs\Labs\CG2028_AY2324S1_Assign1\CG2028_AY2324S1_Assign1\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CG2028_AY2324S1_Assign1.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CG2028_AY2324S1_Assign1.elf
+ 
+arm-none-eabi-size   CG2028_AY2324S1_Assign1.elf 
+arm-none-eabi-objdump -h -S  CG2028_AY2324S1_Assign1.elf  > "CG2028_AY2324S1_Assign1.list"
+   text	   data	    bss	    dec	    hex	filename
+  17408	    480	   1760	  19648	   4cc0	CG2028_AY2324S1_Assign1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CG2028_AY2324S1_Assign1.list
+ 
